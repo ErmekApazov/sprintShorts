@@ -6,7 +6,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class CydeoApp {
     public static void main(String[] args) {
 
-        ApplicationContext container = new AnnotationConfigApplicationContext(configMentor.class);
+        ApplicationContext container = new AnnotationConfigApplicationContext(configMentor.class, anotherConfig.class);
 
         FullTimeMentor ft = container.getBean(FullTimeMentor.class);
 
@@ -14,6 +14,12 @@ public class CydeoApp {
 
         ft.createAccount();
         pt.createAccount();
+
+        String string = container.getBean(String.class);
+        System.out.println(string);
+
+        Integer integer = container.getBean(Integer.class);
+        System.out.println(integer);
 
 
 
