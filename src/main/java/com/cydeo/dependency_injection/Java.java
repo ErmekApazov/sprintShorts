@@ -17,7 +17,13 @@ public class Java {
     OfficeHours officeHours;
     Agile agile;
 
-    public void javaSession(){
-        System.out.println("Java teaching hours: " + ( 20 + officeHours.getOfficeHours() + agile.getAgileSession()) );
+//    public void javaSession(){
+//        System.out.println("Java teaching hours: " + ( 20 + officeHours.getOfficeHours() + agile.getAgileSession()) );
+//    }
+
+    // or
+
+    public void javaSession(OfficeHours officeHours, Agile agile){
+        System.out.println("Java teaching hours: " + (20 + officeHours.getOfficeHours() + agile.getAgileSession()) );
     }
 }

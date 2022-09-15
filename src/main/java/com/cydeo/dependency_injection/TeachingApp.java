@@ -10,7 +10,7 @@ public class TeachingApp {
                 new AnnotationConfigApplicationContext(configSession.class);
 
         Java java = container.getBean(Java.class);
-        java.javaSession();
+        java.javaSession(java.officeHours, java.agile);
 
 
     }
